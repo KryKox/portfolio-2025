@@ -1,11 +1,11 @@
-import {Header} from "@/landing/components/header";
+import {HeaderSection} from "@/landing/header-section";
 import { PageParams } from "@/types/next";
 
 export default async function RoutePage(props: PageParams<{}>) {
     return (
         <div>
 
-            <Header />
+            <HeaderSection />
         </div>
     );
 }

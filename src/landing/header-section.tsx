@@ -1,7 +1,12 @@
 "use client"
 
+import {ThemeToggle} from "@/theme/theme-toggle";
+import {useTheme} from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {useRouter} from "next/router";
+import {useRouter} from "next/navigation";
+import {useEffect, useState} from "react";
 import * as React from "react"
 import { motion } from "motion/react"
 
@@ -78,7 +83,7 @@ function MobileLink({ href, label, className, ...props }: MobileLinkProps) {
     )
 }
 
-export function Header() {
+export function HeaderSection() {
     const pathname = usePathname();
     
     const ref = React.useRef<HTMLUListElement>(null)
@@ -112,7 +117,7 @@ export function Header() {
                     transition={{ duration: 0.4 }}
                     className="hidden md:flex"
                 >
-                    <Logo />
+                    <Logo darkSrc={"/logo/logo-dark.png"} lightSrc={"/logo/logo-light.png"} />
                 </motion.div>
                 
                 <nav
@@ -181,7 +186,8 @@ export function Header() {
                                     </svg>
                                     <span className="sr-only">Toggle Menu</span>
                                 </button>
-                                <Logo />
+                                <Logo darkSrc={"/logo/logo-dark.png"} lightSrc={"/logo/logo-light.png"} />
+                            
                             </div>
                         </SheetTrigger>
                         <SheetContent
@@ -199,7 +205,7 @@ export function Header() {
                                 </SheetDescription>
                             </SheetHeader>
                             <div className="flex flex-col items-start">
-                                <Logo />
+                                <Logo darkSrc={"/logo/logo-dark.png"} lightSrc={"/logo/logo-light.png"} />
                                 <div className="mt-6 flex flex-col space-y-3">
                                     {links.map((item) => (
                                         <MobileLink
@@ -219,36 +225,44 @@ export function Header() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4 }}
                     className="flex items-center gap-3 text-sm font-medium"
-                    aria-label="Authentication"
+                    aria-label="theme"
                 >
-                
+                <ThemeToggle />
                 </motion.nav>
             </div>
         </motion.div>
     )
 }
-const Logo = () => {
-    return (
-        <a href="#home">
-            <div className="text-foreground flex items-end gap-2.5 [&_svg]:h-5">
-                <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 190 190"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M102.256 188.162C97.6186 190.613 92.0647 190.613 87.4273 188.162L11.3881 147.988C6.20803 145.251 2.96875 139.885 2.96875 134.04L2.96875 55.9596C2.96875 50.115 6.20804 44.7487 11.3881 42.0119L87.4273 1.83758C92.0647 -0.612537 97.6186 -0.612537 102.256 1.83758L178.295 42.0119C183.475 44.7487 186.715 50.115 186.715 55.9596L186.715 134.04C186.715 139.885 183.475 145.251 178.295 147.988L102.256 188.162ZM17.2566 130.86C17.2566 133.8 18.9004 136.499 21.5152 137.859L86.6791 171.709C89.3137 173.075 92.4666 171.171 92.4666 168.21L92.4666 100.577C92.4666 97.6363 90.8224 94.9374 88.208 93.5771L23.0442 59.727C20.4089 58.3581 17.2566 60.2643 17.2566 63.2268L17.2566 130.86Z"
-                        fill="currentColor"
-                    />
-                </svg>
-                <span className="font-heading text-lg leading-none font-semibold">
-          Lilian Caffier.
-        </span>
-            </div>
-        </a>
-    )
+
+interface LogoProps {
+    darkSrc: string
+    lightSrc: string
 }
+
+const Logo = ({ darkSrc, lightSrc } : LogoProps) => {
+    const { theme } = useTheme()
+    const [imageSrc, setImageSrc] = useState(darkSrc)
+    
+    useEffect(() => {
+        setImageSrc(theme === "dark" ? darkSrc : lightSrc)
+    }, [theme, darkSrc, lightSrc])
+    
+    
+    return (
+        <Link href="/">
+            <div className="text-foreground flex items-end gap-2.5">
+                <Image
+                    src={imageSrc}
+                    alt="Lilian Caffier Logo"
+                    width={20}
+                    height={20}
+                    className="h-5 w-auto"
+                />
+                <span className="font-heading text-lg leading-none font-semibold text-black dark:text-white ">
+                    Lilian Caffier.
+                </span>
+            </div>
+        </Link>
+    );
+};
+
