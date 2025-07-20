@@ -13,7 +13,7 @@ import {
 export function FooterSection() {
     return (
         <footer
-            className="bg-background border-border mt-4 w-full border-t py-5"
+            className="bg-background border-border  w-full border-t py-5"
             aria-label="Site footer"
         >
             <FooterWrapper>

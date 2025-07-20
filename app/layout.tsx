@@ -24,7 +24,7 @@ export default function RootLayout({children,}: Readonly<{
     return (
         <html lang="en">
         <body
-            className={`${geistSans.variable} ${geistMono.variable}  bg-white dark:bg-black antialiased`}
+            className={`${geistSans.variable} ${geistMono.variable}   antialiased`}
         >
         <Providers>
             {children}

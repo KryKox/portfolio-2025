@@ -12,11 +12,11 @@ import * as React from "react";
 export function HeroSection() {
     return (
         <section
-            className="bg-background container mx-auto w-full overflow-hidden px-6 lg:px-8"
+            className="bg-background/70 mx-auto  w-full overflow-hidden"
             aria-label="Hero section"
         >
             <div className="container mx-auto max-w-5xl py-16 sm:py-28">
-                <div className="flex justify-center">
+                <div className="flex justify-center ">
                     <p
                         className="text-secondary-foreground bg-secondary/90 hover:bg-secondary relative rounded-full border px-3 py-1 text-sm whitespace-nowrap shadow-sm transition-colors duration-300"
                         aria-label="Learn about our new Interactive Data Dashboard feature"
@@ -46,7 +46,7 @@ export function HeroSection() {
                                 className="text-foreground text-center sm:text-left bg-gradient-to-tr from-neutral-300 to-white bg-clip-text text-[clamp(40px,10vw,44px)] leading-[1.2] font-bold tracking-tighter text-balance sm:text-6xl sm:text-[64px]"
                                 aria-describedby="hero-description"
                             >
-                                Hello, I'm Lilian. 👋🏻
+                                Hello, I'm Lilian Caffier. 👋🏻
                             </h1>
                             
                             <div className="mt-2 sm:mt-1 self-center sm:self-start">
