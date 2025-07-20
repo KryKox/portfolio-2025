@@ -22,10 +22,10 @@ import {
 
 
 const links: { href: string; label: string }[] = [
-    { href: "#about", label: "Présentation" },
-    { href: "#projects", label: "Projets" },
-    { href: "#skills", label: "Compétences" },
-    { href: "#experience", label: "Expérience" },
+    { href: "#welcome", label: "Welcome" },
+    { href: "#career", label: "Career" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
 ];
 
@@ -64,7 +64,6 @@ interface MobileLinkProps
 
 function MobileLink({ href, label, className, ...props }: MobileLinkProps) {
     const router = useRouter();
-    
     
     return (
         <a
