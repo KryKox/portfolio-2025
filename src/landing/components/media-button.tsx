@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import {cn} from "@/lib/utils";
-import {useTheme} from "next-themes";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export type MediaButtonProps = {
     label: string;
@@ -17,7 +17,7 @@ export type MediaButtonProps = {
 
 export const MediaButton = ({ label, link, src, darkSrc, alt = "media icon", className }: MediaButtonProps) => {
     const { theme } = useTheme();
-    const [imageSrc, setImageSrc] = useState(src)
+    const [imageSrc, setImageSrc] = useState(src);
     
     useEffect(() => {
         if (theme === "dark" && darkSrc) {
@@ -27,22 +27,23 @@ export const MediaButton = ({ label, link, src, darkSrc, alt = "media icon", cla
         }
     }, [theme, darkSrc, src]);
     
-    
     return (
         <Link
             href={link}
-            className={cn("py-0.5 px-2 bg-white dark:bg-black shadow-sm  text-sm flex items-center transition border rounded-sm font-medium", className)}
-            target={"_blank"}
+            className={cn(
+                "group py-0.5 px-2 bg-white dark:bg-black shadow-sm text-sm flex items-center transition border rounded-sm font-medium",
+                className
+            )}
+            target="_blank"
         >
             <Image
                 src={imageSrc}
                 alt={alt}
                 width={15}
                 height={15}
-                className="mr-2"
+                className="mr-2 transition-transform  group-hover:rotate-[20deg] duration-500"
             />
             {label}
         </Link>
     );
 };
-
