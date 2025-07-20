@@ -3,7 +3,7 @@
 import {useTheme} from "next-themes";
 import Image from "next/image";
 import React, {useEffect, useRef, useState} from "react"
-import { motion, useInView } from "motion/react"
+import {easeOut, motion, useInView} from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -50,7 +50,7 @@ export function FooterContent({ children }: FooterContentProps) {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   }
@@ -86,7 +86,7 @@ export function AnimatedLogo({ className, darkSrc, lightSrc }: AnimatedLogoProps
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   }
@@ -126,7 +126,7 @@ export function AnimatedSocialLinks({ children }: AnimatedSocialLinksProps) {
       x: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.1,
       },
     },
@@ -162,7 +162,7 @@ export function AnimatedSocialIcon({
       scale: 1,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   }
@@ -198,7 +198,7 @@ export function AnimatedNavigation({ children }: AnimatedNavigationProps) {
       x: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.05,
       },
     },
@@ -227,7 +227,7 @@ export function AnimatedNavLink({ href, children }: AnimatedNavLinkProps) {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   }

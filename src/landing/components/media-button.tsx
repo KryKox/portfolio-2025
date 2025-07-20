@@ -31,7 +31,7 @@ export const MediaButton = ({ label, link, src, darkSrc, alt = "media icon", cla
         <Link
             href={link}
             className={cn(
-                "group py-0.5 px-2 bg-white dark:bg-black shadow-sm text-sm flex items-center transition border rounded-sm font-medium",
+                "group py-0.5 px-2 bg-white dark:bg-black shadow-sm text-sm flex items-center transition border rounded-sm font-medium min-w-0 max-w-full",
                 className
             )}
             target="_blank"
@@ -41,9 +41,9 @@ export const MediaButton = ({ label, link, src, darkSrc, alt = "media icon", cla
                 alt={alt}
                 width={15}
                 height={15}
-                className="mr-2 transition-transform  group-hover:rotate-[20deg] duration-500"
+                className="mr-2 flex-shrink-0 transition-transform group-hover:rotate-[20deg] duration-500"
             />
-            {label}
+            <span className="truncate text-[10px] md:text-sm">{label}</span>
         </Link>
     );
 };

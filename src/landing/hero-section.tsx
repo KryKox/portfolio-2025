@@ -88,7 +88,7 @@ export function HeroSection() {
                         user-friendly websites using modern technologies. I'm passionate about coding and always eager
                         to learn more.
                     </p>
-                    <div className="mt-5 flex justify-center items-center space-x-4">
+                    <div className="mt-5 flex justify-center items-center space-x-2 sm:space-x-4">
                         {MEDIA_ITEMS.map((item, key) => {
                             return (
                                 <div
