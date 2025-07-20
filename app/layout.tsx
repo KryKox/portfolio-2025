@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Portfolui",
-    description: "My Portfolio",
+    title: "Portfolio",
+    description: "Hello, my name is Lilian Caffier, I’m 21 years old, and I’m currently a higher education student specializing in fullstack web development.",
 };
 
 export default function RootLayout({children,}: Readonly<{
