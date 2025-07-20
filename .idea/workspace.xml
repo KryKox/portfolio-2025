@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="869300b8-232d-4ce8-a224-ad8d4abc4a5f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/github-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/github-white-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/linkedin-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/youtube-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/landing/components/media-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/landing/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(landing)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(landing)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +49,7 @@
     "com.codeium.enabled": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/krykox/Documents/Work/portfolio-2025/src",
+    "last_opened_file_path": "/Users/krykox/Documents/Work/portfolio-2025/public/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -42,19 +58,24 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
     "ts.external.directory.path": "/Users/krykox/Documents/Work/portfolio-2025/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/icons" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/logo" />
+      <recent name="$PROJECT_DIR$/public/icons" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -82,7 +103,12 @@
       <updated>1752931765812</updated>
       <workItem from="1752931767035" duration="735000" />
       <workItem from="1752932518333" duration="603000" />
-      <workItem from="1752933135761" duration="3683000" />
+      <workItem from="1752933135761" duration="7469000" />
+      <workItem from="1753014869525" duration="1175000" />
+      <workItem from="1753016171616" duration="3760000" />
+      <workItem from="1753021668973" duration="627000" />
+      <workItem from="1753022300514" duration="4000" />
+      <workItem from="1753022329082" duration="1555000" />
     </task>
     <servers />
   </component>
