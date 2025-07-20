@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="869300b8-232d-4ce8-a224-ad8d4abc4a5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/github-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/github-white-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/linkedin-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/x.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/youtube-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/landing/components/media-button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/landing/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/cv-lilian-caffier.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/instagram-icon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(landing)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(landing)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/landing/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/landing/hero-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +36,7 @@
     "com.codeium.enabled": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/krykox/Documents/Work/portfolio-2025/public/icons",
+    "last_opened_file_path": "/Users/krykox/Documents/Work/portfolio-2025/public/files",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,6 +52,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/files" />
       <recent name="$PROJECT_DIR$/public/icons" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
@@ -108,7 +96,9 @@
       <workItem from="1753016171616" duration="3760000" />
       <workItem from="1753021668973" duration="627000" />
       <workItem from="1753022300514" duration="4000" />
-      <workItem from="1753022329082" duration="1555000" />
+      <workItem from="1753022329082" duration="2251000" />
+      <workItem from="1753025169424" duration="170000" />
+      <workItem from="1753025429676" duration="939000" />
     </task>
     <servers />
   </component>

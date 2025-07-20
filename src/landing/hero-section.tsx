@@ -1,6 +1,10 @@
 import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 import {MediaButton, MediaButtonProps} from "@/landing/components/media-button";
+import {Download} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import * as React from "react";
 
 
@@ -46,8 +50,32 @@ export function HeroSection() {
                             </h1>
                             
                             <div className="mt-2 sm:mt-1 self-center sm:self-start">
-                                <Badge className="text-white bg-blue-400 dark:bg-blue-600">Jr Fullstack
-                                    Developer</Badge>
+                                <Tooltip>
+                                    <TooltipTrigger asChild>
+                                        <Badge className="text-white bg-blue-400 dark:bg-blue-600 cursor-pointer">Jr Fullstack
+                                            Developer
+                                        </Badge>
+                                    </TooltipTrigger>
+                                    <TooltipContent side={"bottom"}>
+                                        My Job
+                                    </TooltipContent>
+                                </Tooltip>
+                                
+                                <Tooltip>
+                                    <TooltipTrigger asChild>
+                                        <Badge className={"text-white bg-blue-300 dark:bg-blue-400 ml-2"}>
+                                            <Link
+                                                href={"/files/cv-lilian-caffier.pdf"}
+                                                download
+                                            >
+                                                My Resume
+                                            </Link>
+                                        </Badge>
+                                    </TooltipTrigger>
+                                    <TooltipContent side={"bottom"}>
+                                        Download my Resume
+                                    </TooltipContent>
+                                </Tooltip>
                             </div>
                         </div>
                     </div>
@@ -74,7 +102,6 @@ export function HeroSection() {
                                         className={item.className}
                                     />
                                 </div>
-                            
                             )
                         })}
                     </div>
@@ -104,5 +131,11 @@ const MEDIA_ITEMS: MediaButtonProps[] = [
         link: "https://www.youtube.com/@lilianpro-l3e",
         src: "/icons/youtube-icon.svg",
         className: "border-red-500 text-red-500 hover:shadow-red-500"
+    },
+    {
+        label: "Instagram",
+        link: "https://www.instagram.com/lilian_tout_cour?igsh=MWQ3b2hwdWk0Y2twag%3D%3D&utm_source=qr",
+        src: "/icons/instagram-icon.svg",
+        className: "border-pink-500 text-pink-500 hover:shadow-pink-500"
     },
 ]
