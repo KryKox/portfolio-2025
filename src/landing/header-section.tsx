@@ -22,7 +22,7 @@ import {
 
 
 const links: { href: string; label: string }[] = [
-    { href: "#about", label: "À propos" },
+    { href: "#about", label: "Présentation" },
     { href: "#projects", label: "Projets" },
     { href: "#skills", label: "Compétences" },
     { href: "#experience", label: "Expérience" },
