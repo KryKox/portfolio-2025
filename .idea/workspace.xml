@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="869300b8-232d-4ce8-a224-ad8d4abc4a5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/landing/components/academic-career-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/landing/components/professionnal-career-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/live-campus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo-malraux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/lpo-touchard-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/ua-angers-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/landing/career-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/landing/career-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/landing/components/media-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/landing/components/media-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/landing/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/landing/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/landing/components/academic-career-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/landing/components/academic-career-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/landing/components/professionnal-career-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/landing/components/professionnal-career-card.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +64,9 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/public/icons" />
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -102,7 +104,10 @@
       <workItem from="1753022329082" duration="2251000" />
       <workItem from="1753025169424" duration="170000" />
       <workItem from="1753025429676" duration="4260000" />
-      <workItem from="1753033530394" duration="15309000" />
+      <workItem from="1753033530394" duration="17412000" />
+      <workItem from="1753124989191" duration="435000" />
+      <workItem from="1753125451413" duration="2412000" />
+      <workItem from="1753130357078" duration="2762000" />
     </task>
     <servers />
   </component>
@@ -114,7 +119,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/landing/icons/instagram-icon.tsx</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
