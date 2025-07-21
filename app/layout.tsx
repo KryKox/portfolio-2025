@@ -10,7 +10,6 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-console.log(GA_MEASUREMENT_ID);
 
 export const metadata: Metadata = {
     title: "Lilian Caffier",

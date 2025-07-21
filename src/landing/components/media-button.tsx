@@ -43,7 +43,7 @@ export const MediaButton = ({ label, link, src, darkSrc, alt = "media icon", cla
                 height={15}
                 className="mr-2 flex-shrink-0 transition-transform group-hover:rotate-[20deg] duration-500"
             />
-            <span className="truncate text-[10px] md:text-sm">{label}</span>
+            <span className="truncate text-[10px] text-sm md:text-[15px]">{label}</span>
         </Link>
     );
 };
