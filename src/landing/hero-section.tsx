@@ -51,7 +51,7 @@ export function HeroSection() {
                             >
                                 Hello,  I'm {" "}
                                 <b className="relative inline-block">
-                                    <svg className="absolute -z-10 w-[calc(100%+1rem)] fill-blue-500"
+                                    <svg className="absolute -z-10 w-[calc(100%+1rem)]  fill-blue-400 dark:fill-blue-600"
                                          xmlns="http://www.w3.org/2000/svg" width="223" height="62" viewBox="0 0 223 62"
                                          aria-hidden="true" preserveAspectRatio="none">
                                         <path
