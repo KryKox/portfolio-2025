@@ -5,7 +5,6 @@ import {useTheme} from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
 import * as React from "react"
 import { motion } from "motion/react"
@@ -21,13 +20,14 @@ import {
 } from "@/components/ui/sheet"
 
 
-const links: { href: string; label: string }[] = [
-    { href: "#welcome", label: "Welcome" },
-    { href: "#career", label: "Career" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+const links: { id: string; label: string }[] = [
+    { id: "welcome-section", label: "Welcome" },
+    { id: "career-section", label: "Career" },
+    { id: "skills-section", label: "Skills" },
+    { id: "projects-section", label: "Projects" },
+    { id: "contact-section", label: "Contact" },
 ];
+
 
 
 const headerVariants = {
@@ -58,19 +58,25 @@ const linkVariants = {
 
 interface MobileLinkProps
     extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-    href: string
+    id: string
     label: string
 }
 
-function MobileLink({ href, label, className, ...props }: MobileLinkProps) {
-    const router = useRouter();
+function MobileLink({ id, label, className, ...props }: MobileLinkProps) {
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        
+        if (id === "welcome-section") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
     
     return (
         <a
-            href={href}
-            onClick={() => {
-                router.push(href.toString());
-            }}
+            onClick={handleClick}
             className={cn(
                 "text-muted-foreground w-min py-1 text-sm whitespace-nowrap",
                 className
@@ -79,8 +85,10 @@ function MobileLink({ href, label, className, ...props }: MobileLinkProps) {
         >
             {label}
         </a>
-    )
+    );
 }
+
+
 
 export function HeaderSection() {
     const pathname = usePathname();
@@ -130,25 +138,34 @@ export function HeaderSection() {
                     >
                         {links.map((link, index) => (
                             <motion.li
-                                key={link.href}
+                                key={link.id}
                                 custom={index}
                                 variants={linkVariants}
                                 onMouseEnter={handleMouseEnter}
+                                onClick={() => {
+                                    if (link.id === "welcome-section") {
+                                        window.scrollTo({ top: 0, behavior: "smooth" });
+                                    } else {
+                                        const el = document.getElementById(link.id);
+                                        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    }
+                                }}
                                 className="hover:text-foreground text-muted-foreground z-10 block cursor-pointer px-4 py-1.5 text-sm font-medium tracking-tight transition-colors duration-200"
                             >
-                                <a
-                                    href={link.href}
+                                <span
                                     className={cn(
                                         "text-[13.5px]",
-                                        pathname?.startsWith(link.href)
+                                        pathname?.includes(link.id)
                                             ? "text-foreground"
                                             : "text-muted-foreground hover:text-foreground transition-colors"
                                     )}
                                 >
                                     {link.label}
-                                </a>
+                                </span>
                             </motion.li>
                         ))}
+                        
+                        
                         <motion.li
                             animate={{ left, width, opacity }}
                             transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -208,8 +225,8 @@ export function HeaderSection() {
                                 <div className="mt-6 flex flex-col space-y-3">
                                     {links.map((item) => (
                                         <MobileLink
-                                            key={item.href}
-                                            href={item.href}
+                                            key={item.id}
+                                            id={item.id}
                                             label={item.label}
                                         />
                                     ))}

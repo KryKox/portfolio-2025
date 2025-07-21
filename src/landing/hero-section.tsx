@@ -1,8 +1,10 @@
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import {DiscoverArrow} from "@/landing/components/discover-arrow";
 import {MediaButton, MediaButtonProps} from "@/landing/components/media-button";
-import {Download} from "lucide-react";
+import {Contact, Paperclip} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
@@ -12,6 +14,7 @@ import * as React from "react";
 export function HeroSection() {
     return (
         <section
+            id={"welcome-section"}
             className="bg-background/70 mx-auto  w-full overflow-hidden"
             aria-label="Hero section"
         >
@@ -46,14 +49,16 @@ export function HeroSection() {
                                 className="text-foreground text-center sm:text-left bg-gradient-to-tr from-neutral-300 to-white bg-clip-text text-[clamp(40px,10vw,44px)] leading-[1.2] font-bold tracking-tighter text-balance sm:text-6xl sm:text-[64px]"
                                 aria-describedby="hero-description"
                             >
-                                Hello, I'm Lilian Caffier. 👋🏻
+                                Hello, I'm Lilian Caffier. <span className="inline-block animate-wave origin-[70%_70%]">👋🏼</span>
+                            
+                            
                             </h1>
                             
                             <div className="mt-2 sm:mt-1 self-center sm:self-start">
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <Badge className="text-white bg-blue-400 dark:bg-blue-600 cursor-pointer">Jr Fullstack
-                                            Developer
+                                        <Badge className="text-white bg-blue-400 dark:bg-blue-600 cursor-pointer">
+                                            Jr Fullstack Developer
                                         </Badge>
                                     </TooltipTrigger>
                                     <TooltipContent side={"bottom"}>
@@ -101,11 +106,34 @@ export function HeroSection() {
                                         darkSrc={item.darkSrc}
                                         className={item.className}
                                     />
+                                
                                 </div>
                             )
                         })}
+                    
                     </div>
+                    <Separator className={"my-12"}/>
                 </div>
+                
+                <div className="flex justify-center items-center gap-4">
+                    <Button className={"bg-blue-500 hover:bg-blue-400 duration-500 text-white text-xs md:text-md"}>
+                        <Contact size={8} className={"ml-2"}/>
+                        Contact Me
+                    </Button>
+                    
+                    <Button className={"bg-blue-400 hover:bg-blue-300 duration-500 text-white text-xs md:text-md"}>
+                        <Paperclip size={8} className={"ml-2"}/>
+                        My projects
+                    </Button>
+                </div>
+                
+                <div className="mt-16 flex justify-center animate-bounce">
+                    <DiscoverArrow
+                        content={"Discover more..."}
+                        targetId={"career-section"}
+                    />
+                </div>
+            
             </div>
         </section>
     );
