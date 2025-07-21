@@ -8,7 +8,9 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
+console.log(GA_MEASUREMENT_ID);
 
 export const metadata: Metadata = {
     title: "Lilian Caffier",
@@ -31,6 +33,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Script>
         )}
         
+        {GA_MEASUREMENT_ID && (
+            <>
+                <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+                    strategy="afterInteractive"
+                />
+                <Script id="gtag-init" strategy="afterInteractive">
+                    {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+                </Script>
+            </>
+        )}
+        
         <body className={`${geistSans.variable} ${geistMono.variable} bg-background/70 antialiased`}>
         {GTM_ID && (
             <noscript>
@@ -42,7 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
             </noscript>
         )}
-        
         <Providers>{children}</Providers>
         </body>
         </html>
