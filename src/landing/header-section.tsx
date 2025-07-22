@@ -255,7 +255,7 @@ interface LogoProps {
     lightSrc: string
 }
 
-const Logo = ({ darkSrc, lightSrc } : LogoProps) => {
+export const Logo = ({ darkSrc, lightSrc } : LogoProps) => {
     const { theme } = useTheme()
     const [imageSrc, setImageSrc] = useState(darkSrc)
     

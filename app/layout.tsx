@@ -14,7 +14,7 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 export const metadata: Metadata = {
     title: "Lilian Caffier",
     description:
-        "Hello, my name is Lilian Caffier, I’m 21 years old, and I’m currently a higher education student specializing in fullstack web development.",
+        "Hello, my name is Lilian Caffier, I’m 21 years old, and I’m currently own SaaS related to trading industry.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

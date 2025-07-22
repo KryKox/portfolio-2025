@@ -66,33 +66,13 @@ export function HeroSection() {
                             
                             </h1>
                             
-                            <div className="mt-2 sm:mt-1 self-center sm:self-start">
-                                <Tooltip>
-                                    <TooltipTrigger asChild>
-                                        <Badge className="text-white bg-blue-400 md:text-sm dark:bg-blue-600 cursor-pointer">
-                                            Jr Fullstack Developer
-                                        </Badge>
-                                    </TooltipTrigger>
-                                    <TooltipContent side={"bottom"}>
-                                        My Job
-                                    </TooltipContent>
-                                </Tooltip>
-                                
-                                <Tooltip>
-                                    <TooltipTrigger asChild>
-                                        <Badge className={"text-white bg-blue-300 md:text-sm dark:bg-blue-400 ml-2"}>
-                                            <Link
-                                                href={"/files/cv-lilian-caffier.pdf"}
-                                                download
-                                            >
-                                                My Resume
-                                            </Link>
-                                        </Badge>
-                                    </TooltipTrigger>
-                                    <TooltipContent side={"bottom"}>
-                                        Download my Resume
-                                    </TooltipContent>
-                                </Tooltip>
+                            <div className="mt-2 sm:mt-1 self-center sm:self-start ">
+                                <Badge className="text-white bg-blue-400 md:text-sm dark:bg-blue-600 cursor-pointer">
+                                    Fullstack Developer
+                                </Badge>
+                                <Badge className="mx-2 text-white bg-blue-300 md:text-sm dark:bg-blue-400 cursor-pointer">
+                                    Trader
+                                </Badge>
                             </div>
                         </div>
                     </div>
@@ -101,9 +81,7 @@ export function HeroSection() {
                         className="text-zinc-600 italic z-15 mx-auto  font-normal text-balance  text-[14px] sm:text-[18px] mt-4 md:mt-8"
                         id="hero-description"
                     >
-                        I'm a junior web developer with a Bachelor's degree in Computer Science. I build responsive and
-                        user-friendly websites using modern technologies. I'm passionate about coding and always eager
-                        to learn more.
+                        I’m a junior trader and fullstack developer. I analyze financial markets and build trading tools to support data-driven decision-making. With a strong foundation in programming and a passion for market dynamics, I enjoy developing efficient, automated trading systems and continuously expanding my knowledge in both finance and technology.
                     </p>
                     <div className="mt-5 flex justify-center items-center space-x-2 sm:space-x-4">
                         {MEDIA_ITEMS.map((item, key) => {
